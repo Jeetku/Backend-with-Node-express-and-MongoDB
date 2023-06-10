@@ -1,4 +1,0 @@
-
-    <p class="card-text">Body</p>
-  </div>
-</div>
