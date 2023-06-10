@@ -1,18 +1,18 @@
-const lib = require("./lib.js");
-// import { sum, diff } from "./lib.js";
-
-const express = require("express");
-const server = express();
-server.listen(8081);
-console.log("Hello");
+const http = require("http");
 const fs = require("fs");
-const t1 = performance.now();
-const txt = fs.readFileSync("demo.txt", "utf-8");
-// fs.readFile("demo.txt", "utf-8", (err, text) => {
-//   console.log(text);
-// });
+// const index = fs.readFileSync("index.html", "utf8");
+const index = fs.readFileSync("data.json", "utf8");
+const data = {
+  age: 5,
+};
+const server = http.createServer((req, res) => {
+  console.log(req.url);
+  console.log("Server started");
+  //   res.setHeader("Dummy", "Dummy Header");
+  // res.setHeader("Content-Type", "text/html");
+  res.setHeader("Content-Type", "application/json");
+  // res.end(JSON.stringify(data));
+  res.end(index);
+});
 
-console.log(txt);
-console.log(lib.sum(4, 5), lib.diff(5, 8));
-const t2 = performance.now();
-console.log(t2 - t1);
+server.listen(8080);
