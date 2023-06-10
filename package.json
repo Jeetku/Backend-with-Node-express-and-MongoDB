@@ -1,3 +1,18 @@
 {
-    "type":"commonjs"
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "a example of Node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git remote add origin https://github.com/Jeetku/Backend-with-Node-express-and-MongoDB.git"
+  },
+  "author": "Jeetesh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
