@@ -7,10 +7,10 @@ const router = express.Router();
 // ?CREATE POST /products     C R U D
 
 router
-  .post("/users", productController.createProduct)
+  .post("/products", productController.createProduct)
 
   // ?READ GET /products
-  .get("/users", productController.getAllProducts)
+  .get("/products", productController.getAllProducts)
 
   // ?READ GET /products/:id
   .get("/products/:id", productController.getProduct)
